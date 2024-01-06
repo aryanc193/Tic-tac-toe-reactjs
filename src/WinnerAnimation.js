@@ -15,12 +15,14 @@ const WinnerAnimation = ({ winner, onReset, onResetScore }) => {
     return () => clearTimeout(timeout);
   }, [winner, onReset, onResetScore]);
 
-  return (
+ return (
     showAnimation && (
       <div className="winner-animation">
         <div className="winner-popup">
           <img className="winimg" src="/winimg.png" alt="partypop"></img>
-          <h2>{`WINNER is ${winner}!!!`}</h2>
+          <p>
+            <nobr>{`WINNER is ${winner}!!!`}</nobr>
+          </p>
         </div>
       </div>
     )
